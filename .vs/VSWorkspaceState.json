@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\routes",
+    "\\storage",
+    "\\storage\\app",
+    "\\storage\\app\\private",
+    "\\storage\\app\\public",
+    "\\storage\\logs"
+  ],
+  "SelectedNode": "\\storage\\app\\public\\.gitignore",
+  "PreviewInSolutionExplorer": false
+}

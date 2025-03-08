@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\order_items;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Storeorder_itemsRequest;
-use App\Http\Requests\Updateorder_itemsRequest;
+use App\Models\Order;   
+use App\Models\OrderItem;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class OrderItemsController extends Controller
 {

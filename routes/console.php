@@ -11,9 +11,10 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-// Register the delete inactive users command
+// Ensure the scheduler is properly registered
 app()->booted(function () {
     $schedule = app(Schedule::class);
+    
+    // Register the delete inactive users command to run daily
     $schedule->command('users:delete-inactive')->daily();
 });
-

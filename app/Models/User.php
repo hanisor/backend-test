@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -16,6 +16,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'profile_picture',
+        'last_login_at',
+        'profile_picture'
     ];
 
     protected $hidden = [
@@ -30,4 +33,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function orderItems()
+    {
+        return $this->hasMany(orderItems::class);
+    }
+    
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    
 }
